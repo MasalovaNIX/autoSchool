@@ -1,7 +1,13 @@
-package com.autoSchool.first;
+package com.autoSchoolPartTwoAndTwo.first;
 import java.util.Scanner;
 
 public class Hello {
+
+            public static void main(String[] args){
+                Hello.hello();
+                Hello.printHelloName();
+
+            }
 
             public static void printHelloName() {
             Scanner in = new Scanner(System.in);

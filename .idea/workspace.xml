@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27cda763-5f14-4c1e-ac6d-85fb69fb9b20" name="Default Changelist" comment="Working Hello">
-      <change beforePath="$PROJECT_DIR$/.idea/AutoSchool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AutoSchool.iml" afterDir="false" />
+    <list default="true" id="27cda763-5f14-4c1e-ac6d-85fb69fb9b20" name="Default Changelist" comment="autoSchoolPartTwoAndTwo">
+      <change afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndFive/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndFour/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndSix/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndThree/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndFive/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndFour/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndSix/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndThree/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/autoSchool/first/Hello.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/autoSchool/first/Hello.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/autoSchool/first/main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/autoSchool/first/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/autoSchool/first/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/autoSchool/first/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,19 +60,36 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="IntelliLang.Configuration" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\masalova\IdeaProjects\autoSchool\src\main\java" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.MainTwo">
-    <configuration name="Hello (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Hello">
+    <configuration name="Hello (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.autoSchool_2_2.first.Hello" />
+      <module name="AutoSchool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.autoSchool_2_2.first.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.autoSchool_2_2.com.welcome.Hello" />
       <module name="AutoSchool" />
       <extension name="coverage">
@@ -79,8 +102,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndTwo.first.Hello" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndTwo.first.Main" />
       <module name="AutoSchool" />
       <extension name="coverage">
         <pattern>
@@ -92,12 +115,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndTwo.com.welcome.Hello" />
+    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndFive.Main" />
       <module name="AutoSchool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.autoSchoolPartTwoAndTwo.com.welcome.*" />
+          <option name="PATTERN" value="com.autoSchoolPartTwoAndFive.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +128,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.autoSchool_2_2.welcome.Hello" />
+    <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndSix.Main" />
       <module name="AutoSchool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.autoSchool_2_2.welcome.*" />
+          <option name="PATTERN" value="com.autoSchoolPartTwoAndSix.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,34 +148,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.autoSchool.first.Main2" />
-      <module name="AutoSchool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.autoSchoolPartTwoAndTwo.first.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndTwo.first.Main" />
-      <module name="AutoSchool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.autoSchoolPartTwoAndTwo.first.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndTwo.first.MainTwo" />
       <module name="AutoSchool" />
       <extension name="coverage">
         <pattern>
@@ -192,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainTwo" />
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Hello" />
-        <item itemvalue="Application.Hello (1)" />
-        <item itemvalue="Application.Hello (1)" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Hello (2)" />
+        <item itemvalue="Application.Main (5)" />
+        <item itemvalue="Application.Main (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619013937005</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="autoSchoolPartTwoAndTwo">
+      <created>1619101973617</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1619101973617</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,6 +290,17 @@
     <MESSAGE value="Add Hello" />
     <MESSAGE value="Add new hello" />
     <MESSAGE value="Working Hello" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working Hello" />
+    <MESSAGE value="autoSchoolPartTwoAndTwo" />
+    <option name="LAST_COMMIT_MESSAGE" value="autoSchoolPartTwoAndTwo" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

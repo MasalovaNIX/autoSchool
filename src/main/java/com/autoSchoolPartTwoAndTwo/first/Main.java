@@ -1,6 +1,6 @@
-package com.autoSchool.first;
+package com.autoSchoolPartTwoAndTwo.first;
 
-public class main {
+public class Main {
 
     public static void main(String[] args){
         Hello.hello();
