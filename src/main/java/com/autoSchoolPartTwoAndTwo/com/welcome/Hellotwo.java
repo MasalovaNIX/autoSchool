@@ -1,14 +1,14 @@
 package com.autoSchoolPartTwoAndTwo.com.welcome;
 import java.util.Scanner;
 
-public class Hello {
+public class Hellotwo {
 
     private static String userName;
 
     public static void main(String[] args){
-        Hello.setupName();
-        Hello.welcome();
-        Hello.byeBay();
+        Hellotwo.setupName();
+        Hellotwo.welcome();
+        Hellotwo.byeBay();
 
     }
 

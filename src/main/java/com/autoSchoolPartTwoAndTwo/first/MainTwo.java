@@ -1,13 +1,13 @@
 package com.autoSchoolPartTwoAndTwo.first;
-import com.autoSchoolPartTwoAndTwo.com.welcome.Hello;
+import com.autoSchoolPartTwoAndTwo.com.welcome.Hellotwo;
 
 public class MainTwo {
 
     public static void main(String[] args){
-        Hello.setupName();
-        Hello.welcome();
-        System.out.println("Hello World!");
-        Hello.byeBay();
+        Hellotwo.setupName();
+        Hellotwo.welcome();
+        System. out.println("Hello World!");
+        Hellotwo.byeBay();
 
     }
 
