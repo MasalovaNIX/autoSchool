@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        Main.taskone();
+        Main.taskone();     //можно без Main и опять наименования
         Main.tasktwo();
         Main.taskthree();
         Main.taskfour();
@@ -40,7 +40,7 @@ public class Main {
         int a = one.nextInt();
         int b = one.nextInt();
         if (a < b) {
-            System.out.println("Min is " + a);
+            System.out.println("Min is " + a);      //просто для справки, можно так записать if: int min = (a < b) ? a : b;
         } else {
             System.out.println("Min is " + b);
         }
@@ -80,7 +80,7 @@ public class Main {
         } else if (z >= x && z >= y && x >= y) {
             System.out.println("Numbers in descending order: " + z + " " + x + " " + y);
         } else if (z >= x && z >= y && y >= x) {
-            System.out.println("Numbers in descending order: " + z + " " + y + " " + x);
+            System.out.println("Numbers in descending order: " + z + " " + y + " " + x);        //с учётом, что задача на условные операторы - годится. Но в реальном проекте лучше засунуть всё в массив и отсортировать
         }
     }
 
@@ -101,7 +101,7 @@ public class Main {
                 char c1 = s1.charAt(i);
                 char c2 = s2.charAt(i);
 
-                if (c1 != c2) {
+                if (c1 != c2) {     // if (s1.equals(s2))
                     System.out.println("Names aren't equals.");
                     return;
                 }
@@ -140,7 +140,7 @@ public class Main {
         System.out.println("Enter age:");
         int s2 = second.nextInt();
 
-        if (s2 > 18) {
+        if (s2 > 18) {      //а если 18?
             System.out.println("И 18-ти достаточно");
         }
         System.out.println("Go next.");
@@ -153,7 +153,7 @@ public class Main {
         int secret;
         // Генерируем число от 0 до 20
         secret = random.nextInt(20 + 1);
-        System.out.println(secret);
+        System.out.println(secret); //я выигрываю в каждой игре с первой попытки ))
 
         Scanner first = new Scanner(System.in);
         System.out.println("Угадай число");
@@ -163,7 +163,7 @@ public class Main {
         for (int i = 0; i < 7; i++) {
             num1 = first.nextInt();
             if (num1 == secret) {
-                i = 7;
+                i = 7;      //хитро, но есть же break
                 System.out.println("Выиграл");
             }
             if (num1 < secret) {
@@ -211,8 +211,8 @@ public class Main {
         System.out.println("Enter number:");
         int s2 = second.nextInt();
 
-        int i = s2;
-        while (i > 0) {
+        int i = s2;     //почему бы сразу не объявить int i = second.nextInt();
+        while (i > 0) { //while (i <= s1) i++ - так будет правильнее и красивее
             System.out.println(s1);
             i--;
 
@@ -240,7 +240,7 @@ public class Main {
             int j;
             j = i * 10;
             i++;
-            System.out.println(" " + j);
+            System.out.println(" " + j);    //не очень похоже на таблицу умножения ))
         }
     }
 

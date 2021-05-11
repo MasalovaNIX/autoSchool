@@ -16,7 +16,7 @@ public class Main {
         Main.initializeArrayFive();
     }
 
-    public static void initializeArray() throws IOException {
+    public static void initializeArray() throws IOException {   //метод initializeArray должен только создавать и возвращать массив. Ещё нужен дополнительный метод max(int[] array), который уже будет искать максимальное число. И его можно будет использовать много раз и в любом месте
 
         System.out.println("Задание 1");
         Scanner write = new Scanner(System.in);
@@ -31,7 +31,7 @@ public class Main {
             System.out.println(arrayOne[i]);
         }
 
-        System.out.println("Длинна массива:" + arrayOne.length);
+        System.out.println("Длинна массива:" + arrayOne.length);    //зачем?))
 
         int max = arrayOne[0];
         for (int i = 1; i < arrayOne.length; i++) {
@@ -54,7 +54,7 @@ public class Main {
             arrayTwo[t] = writeTwo.nextLine();
         }
         System.out.println("Массив в обратном порядке:");
-        for (int t = 0; t < arrayTwo.length; t++) {
+        for (int t = 0; t < arrayTwo.length; t++) {     //усложнила. можно так: for (int t = array.length - 1; t >= 0; t--) То есть, цикл начнёт брать слова с последнего места в массиве
             int j = arrayTwo.length - t - 1;
 
             System.out.println(arrayTwo[j]);
@@ -63,7 +63,7 @@ public class Main {
 
     public static void initializeArrayThree() throws IOException {
         System.out.println("Задание 3");
-        String[] arrayThree = new String[10];
+        String[] arrayThree = new String[10];   //arrayString и arrayInt было бы понятнее
         int[] arrayFour = new int[10];
 
         Scanner write3 = new Scanner(System.in);
