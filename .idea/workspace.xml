@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="27cda763-5f14-4c1e-ac6d-85fb69fb9b20" name="Default Changelist" comment="autoSchoolPartTwoAndTwo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/com/welcome/Hello.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/first/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/first/MainTwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/first/MainTwo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/com/welcome/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/com/welcome/Hellotwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +65,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Hello (1)">
+  <component name="RunManager" selected="Application.MainTwo">
     <configuration name="Hello (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndTwo.first.Hello" />
       <module name="AutoSchool" />
@@ -185,9 +179,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainTwo" />
         <item itemvalue="Application.Hello (1)" />
         <item itemvalue="Application.Hello (2)" />
-        <item itemvalue="Application.MainTwo" />
         <item itemvalue="Application.Hellotwo" />
         <item itemvalue="Application.Hello" />
       </list>
@@ -272,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620390640329</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="autoSchoolPartTwoAndTwo">
+      <created>1620393571769</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1620393571769</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
