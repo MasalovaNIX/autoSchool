@@ -5,7 +5,7 @@ public class Hellotwo {
 
     private static String userName;
 
-    public static void main(String[] args){
+    public static void main(String[] args){  //не совсем понимаю, зачем здесь тоже вызываешь методы? Это же вспомогательный класс, а все вызовы в MainTwo уже идут
         Hellotwo.setupName();
         Hellotwo.welcome();
         Hellotwo.byeBay();
