@@ -33,7 +33,7 @@ public class Main {
 
     public static void max(int[] two) {
         // System.out.println("Длинна массива:" + arrayOne.length);    //зачем?))
-
+//
         int maxNum = two[0];
         for (int i = 1; i < two.length; i++) {
             if (two[i] > maxNum)
