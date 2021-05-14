@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Update_at_5_11_2021_8_10_PM_[Default_Changelist]" date="1620753048227" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_11_2021_8_10_PM_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 5/11/2021 8:10 PM [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="src/com/autoSchoolPartThreeAndSix/figure/Triangle.class" />
+    <option name="AFTER_PATH" value="src/com/autoSchoolPartThreeAndSix/figure/Triangle.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_11_2021_8_10_PM_[Default_Changelist]/Triangle.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/com/autoSchoolPartThreeAndSix/figure/Figures.class" />
+    <option name="AFTER_PATH" value="src/com/autoSchoolPartThreeAndSix/figure/Figures.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_11_2021_8_10_PM_[Default_Changelist]/Figures.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/com/autoSchoolPartThreeAndSix/Main.class" />
+    <option name="AFTER_PATH" value="src/com/autoSchoolPartThreeAndSix/Main.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_11_2021_8_10_PM_[Default_Changelist]/Main.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/com/autoSchoolPartThreeAndSix/figure/Circle.class" />
+    <option name="AFTER_PATH" value="src/com/autoSchoolPartThreeAndSix/figure/Circle.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_11_2021_8_10_PM_[Default_Changelist]/Circle.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/com/autoSchoolPartThreeAndSix/figure/Square.class" />
+    <option name="AFTER_PATH" value="src/com/autoSchoolPartThreeAndSix/figure/Square.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_11_2021_8_10_PM_[Default_Changelist]/Square.class" />
+  </binary>
+</changelist>

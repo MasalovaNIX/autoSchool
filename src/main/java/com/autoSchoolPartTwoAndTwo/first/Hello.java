@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Hello {
 
     public static void main(String[] args){
-        Hello.hello();             //можно просто метод вызывать hello(), ты же и так внутри класса Hello
-        Hello.printHelloName();
+        hello();             //можно просто метод вызывать hello(), ты же и так внутри класса Hello
+        printHelloName();
 
     }
 

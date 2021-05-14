@@ -7,31 +7,30 @@ import java.util.Scanner;
 
 public class Main {
 
-
     public static void main(String[] args) throws Exception {
 
-        Main.taskone();     //можно без Main и опять наименования
-        Main.tasktwo();
-        Main.taskthree();
-        Main.taskfour();
-        Main.taskfive();
-        Main.tasksix();
-        Main.taskseven();
-        Main.taskeight();
-        Main.tasknine();
-        Main.taskten();
-        Main.taskeleven();
-        Main.tasktwelve();
-        Main.taskthirteen();
-        Main.taskfourteen();
-        Main.taskfifteen();
-        Main.tasksixteen();
-        Main.taskseventeen();
-        Main.taskeightteen();
+        taskOne();     //можно без Main и опять наименования
+        taskTwo();
+        taskThree();
+        taskFour();
+        taskFive();
+        taskSix();
+        taskSeven();
+        taskEight();
+        taskNine();
+        taskTen();
+        taskEleven();
+        taskTwelve();
+        taskThirteen();
+        taskFourteen();
+        taskFifteen();
+        taskSixteen();
+        taskSeventeen();
+        taskEightteen();
 
     }
 
-    public static void taskone() throws IOException {
+    public static void taskOne() throws IOException {
 
         System.out.println("Task 1");
 
@@ -40,13 +39,14 @@ public class Main {
         int a = one.nextInt();
         int b = one.nextInt();
         if (a < b) {
-            System.out.println("Min is " + a);      //просто для справки, можно так записать if: int min = (a < b) ? a : b;
+            System.out.println("Min is " + a);
+            //просто для справки, можно так записать if: int min = (a < b) ? a : b;
         } else {
             System.out.println("Min is " + b);
         }
     }
 
-    public static void tasktwo() throws IOException {
+    public static void taskTwo() throws IOException {
         System.out.println("Task 2");
 
         Scanner two = new Scanner(System.in);
@@ -60,7 +60,7 @@ public class Main {
         System.out.println("Max is " + max);
     }
 
-    public static void taskthree() throws IOException {
+    public static void taskThree() throws IOException {
         System.out.println("Task 3");
 
         Scanner two = new Scanner(System.in);
@@ -80,11 +80,13 @@ public class Main {
         } else if (z >= x && z >= y && x >= y) {
             System.out.println("Numbers in descending order: " + z + " " + x + " " + y);
         } else if (z >= x && z >= y && y >= x) {
-            System.out.println("Numbers in descending order: " + z + " " + y + " " + x);        //с учётом, что задача на условные операторы - годится. Но в реальном проекте лучше засунуть всё в массив и отсортировать
+            System.out.println("Numbers in descending order: " + z + " " + y + " " + x);
+            //с учётом, что задача на условные операторы - годится.
+            // Но в реальном проекте лучше засунуть всё в массив и отсортировать
         }
     }
 
-    public static void taskfour() throws IOException {
+    public static void taskFour() throws IOException {
         System.out.println("Task 4");
 
         Scanner first = new Scanner(System.in);
@@ -98,21 +100,18 @@ public class Main {
         if (s1.length() == s2.length()) {
             System.out.println("Lengths of names are equals.");
             for (int i = 0; i < s1.length(); i++) {
-                char c1 = s1.charAt(i);
-                char c2 = s2.charAt(i);
-
-                if (c1 != c2) {     // if (s1.equals(s2))
-                    System.out.println("Names aren't equals.");
+                if (s1.equals(s2)) {
+                    System.out.println("Names are equals.");
                     return;
                 }
             }
-            System.out.println("Names are equals.");
+            System.out.println("Names aren't equals.");
             return;
         }
         System.out.println("Names aren't equals.");
     }
 
-    public static void taskfive() throws IOException {
+    public static void taskFive() throws IOException {
         System.out.println("Task 5");
 
         Scanner first = new Scanner(System.in);
@@ -126,10 +125,12 @@ public class Main {
         if (s2 < 18) {
             System.out.println("Подрасти еще");
         }
-        System.out.println("Go next.");
+        if (s2 >= 18) {
+            System.out.println("Поздравляю, Вы - совершеннолетний.");
+        }
     }
 
-    public static void tasksix() throws IOException {
+    public static void taskSix() throws IOException {
         System.out.println("Task 6");
 
         Scanner first = new Scanner(System.in);
@@ -139,21 +140,26 @@ public class Main {
         Scanner second = new Scanner(System.in);
         System.out.println("Enter age:");
         int s2 = second.nextInt();
-
+        if (s2 == 18) {
+            System.out.println("18-норм, но лучше не надо");
+        }
         if (s2 > 18) {      //а если 18?
             System.out.println("И 18-ти достаточно");
+
         }
-        System.out.println("Go next.");
+        System.out.println("Поздравляю, Вы - несовершеннолетний.");
     }
 
-    public static void taskseven() throws IOException {
+
+    public static void taskSeven() throws InterruptedException {
         System.out.println("Task 7");
 
         Random random = new Random();
         int secret;
         // Генерируем число от 0 до 20
         secret = random.nextInt(20 + 1);
-        System.out.println(secret); //я выигрываю в каждой игре с первой попытки ))
+        System.out.println("Сделайте вид, что не видите это число: " + secret);
+        //я выигрываю в каждой игре с первой попытки ))
 
         Scanner first = new Scanner(System.in);
         System.out.println("Угадай число");
@@ -162,10 +168,6 @@ public class Main {
         int num1;
         for (int i = 0; i < 7; i++) {
             num1 = first.nextInt();
-            if (num1 == secret) {
-                i = 7;      //хитро, но есть же break
-                System.out.println("Выиграл");
-            }
             if (num1 < secret) {
                 System.out.println("Мало");
             }
@@ -177,21 +179,24 @@ public class Main {
                     System.out.println("Проиграл");
                 }
             }
-        }
+            if (num1 == secret) {
+                //i = 7;      //хитро, но есть же break
+                System.out.println("Выиграл");
+                break;
+            }
+        } Thread.sleep(1800);
     }
 
-    public static void taskeight() throws IOException {
+    public static void taskEight() throws IOException {
         System.out.println("Task 8");
         int i = 1;
         while (i < 11) {
             System.out.println(i);
             i++;
         }
-
-
     }
 
-    public static void tasknine() throws IOException {
+    public static void taskNine() throws IOException {
         System.out.println("Task 9");
         int i = 10;
         while (i >= 1) {
@@ -200,7 +205,7 @@ public class Main {
         }
     }
 
-    public static void taskten() throws IOException {
+    public static void taskTen() throws InterruptedException {
         System.out.println("Task 10");
 
         Scanner first = new Scanner(System.in);
@@ -210,16 +215,18 @@ public class Main {
         Scanner second = new Scanner(System.in);
         System.out.println("Enter number:");
         int s2 = second.nextInt();
-
-        int i = s2;     //почему бы сразу не объявить int i = second.nextInt();
-        while (i > 0) { //while (i <= s1) i++ - так будет правильнее и красивее
+        while (s2 > 0) {
             System.out.println(s1);
-            i--;
-
+            s2--;
+            //почему бы сразу не объявить int i = second.nextInt();
+            //убрала вообще i
+            ////while (i <= s1) i++ - так будет правильнее и красивее
+            //s1 - это ж стринга? и тогда i задавать как 0 первоначально
         }
+        Thread.sleep(1800);
     }
 
-    public static void taskeleven() {
+    public static void taskEleven() {
         System.out.println("Task 11");
         int i = 0;
         while (i < 10) {
@@ -233,29 +240,34 @@ public class Main {
         }
     }
 
-    public static void tasktwelve() throws IOException {
+    public static void taskTwelve() throws IOException {
         System.out.println("Task 12");
-        int i = 0;
-        while (i < 11) {
-            int j;
-            j = i * 10;
-            i++;
-            System.out.println(" " + j);    //не очень похоже на таблицу умножения ))
+//        int i = 0;
+//        while (i < 11) {
+//            int j;
+//            j = i * 10;
+//            i++;
+//            System.out.print(" " + j);
+// не очень похоже на таблицу умножения ))
+// не правильно поняла задание, делала тольно на 10
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                System.out.print(" " + (i * j));
+            }
+            System.out.println();
         }
     }
 
-    public static void taskthirteen() throws IOException {
+    public static void taskThirteen() throws IOException {
         System.out.println("Task 13");
 
         for (int i = 2; i <= 100; i++)
             if (i % 2 == 0)
                 System.out.print(" " + i);
-
     }
 
-    public static void taskfourteen() throws IOException {
-        //System.out.println("");
-        System.out.println("Task 14\n");
+    public static void taskFourteen() throws IOException {
+        System.out.println("\nTask 14");
 
         Scanner first = new Scanner(System.in);
         System.out.println("Enter height:");
@@ -273,8 +285,7 @@ public class Main {
         }
     }
 
-    public static void taskfifteen() throws IOException {
-        System.out.println("");
+    public static void taskFifteen() throws IOException {
         System.out.println("Task 15");
 
         for (int i = 0; i < 10; i++) {
@@ -285,9 +296,8 @@ public class Main {
         }
     }
 
-    public static void tasksixteen() throws IOException {
+    public static void taskSixteen() throws IOException {
         System.out.println("Task 16");
-
         for (int i = 0; i < 10; i++) {
             System.out.print("8 ");
         }
@@ -297,7 +307,7 @@ public class Main {
         }
     }
 
-    public static void taskseventeen() throws IOException {
+    public static void taskSeventeen() throws IOException {
         System.out.println("Task 17");
 
         Scanner first = new Scanner(System.in);
@@ -308,7 +318,7 @@ public class Main {
         }
     }
 
-    public static void taskeightteen() throws InterruptedException {
+    public static void taskEightteen() throws InterruptedException {
         System.out.println("Task 18");
         for (int i = 30; i >= 0; i--) {
             Thread.sleep(100); //задержка на одну десятую секунды.

@@ -1,0 +1,1017 @@
+Index: src/main/java/com/autoSchoolPartTwoAndFive/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartTwoAndFive;\r\n\r\nimport java.io.*;\r\nimport java.util.Scanner;\r\n\r\n\r\npublic class Main {\r\n\r\n    private static int i;\r\n\r\n    public static void main(String[] args) throws Exception {\r\n        Main.initializeArray();\r\n        Main.initializeArrayTwo();\r\n        Main.initializeArrayThree();\r\n        Main.initializeArrayFour();\r\n        Main.initializeArrayFive();\r\n    }\r\n\r\n    public static void initializeArray() throws IOException {   //метод initializeArray должен только создавать и возвращать массив. Ещё нужен дополнительный метод max(int[] array), который уже будет искать максимальное число. И его можно будет использовать много раз и в любом месте\r\n\r\n        System.out.println(\"Задание 1\");\r\n        Scanner write = new Scanner(System.in);\r\n        System.out.println(\"Введите двадцать чисел:\");\r\n        int[] arrayOne = new int[20];\r\n\r\n        for (int i = 0; i < 20; i++) {\r\n            arrayOne[i] = write.nextInt();\r\n        }\r\n        System.out.println(\"Ваш массив:\");\r\n        for (int i = 0; i < arrayOne.length; i++) {\r\n            System.out.println(arrayOne[i]);\r\n        }\r\n\r\n        System.out.println(\"Длинна массива:\" + arrayOne.length);    //зачем?))\r\n\r\n        int max = arrayOne[0];\r\n        for (int i = 1; i < arrayOne.length; i++) {\r\n            if (arrayOne[i] > max)\r\n                max = arrayOne[i];\r\n        }\r\n\r\n        System.out.println(\"Максимальное значение равно: \" + max);\r\n    }\r\n\r\n    public static void initializeArrayTwo() throws IOException {\r\n        System.out.println(\"Задание 2\");\r\n        String[] arrayTwo = new String[10];\r\n        System.out.println(\"Длинна массива:\" + arrayTwo.length);\r\n\r\n        Scanner writeTwo = new Scanner(System.in);\r\n        System.out.println(\"Введите восемь чисел:\");\r\n\r\n        for (int t = 0; t < 8; t++) {\r\n            arrayTwo[t] = writeTwo.nextLine();\r\n        }\r\n        System.out.println(\"Массив в обратном порядке:\");\r\n        for (int t = 0; t < arrayTwo.length; t++) {     //усложнила. можно так: for (int t = array.length - 1; t >= 0; t--) То есть, цикл начнёт брать слова с последнего места в массиве\r\n            int j = arrayTwo.length - t - 1;\r\n\r\n            System.out.println(arrayTwo[j]);\r\n        }\r\n    }\r\n\r\n    public static void initializeArrayThree() throws IOException {\r\n        System.out.println(\"Задание 3\");\r\n        String[] arrayThree = new String[10];   //arrayString и arrayInt было бы понятнее\r\n        int[] arrayFour = new int[10];\r\n\r\n        Scanner write3 = new Scanner(System.in);\r\n        System.out.println(\"Введите десять строк:\");\r\n        for (i = 0; i < 10; i++) {\r\n            arrayThree[i] = write3.nextLine();\r\n        }\r\n\r\n        for (i = 0; i < arrayThree.length; i++) {\r\n            arrayFour[i] = arrayThree[i].length();\r\n        }\r\n        System.out.println(\"Массив с длинами строк:\");\r\n        for (i = 0; i < arrayFour.length; i++)\r\n            System.out.println(arrayFour[i]);\r\n    }\r\n\r\n    public static void initializeArrayFour() throws IOException {\r\n\r\n        System.out.println(\"Задание 4\");\r\n\r\n        Scanner write4 = new Scanner(System.in);\r\n        System.out.println(\"Введите десять чисел:\");\r\n        int[] arrayFive = new int[10];\r\n        int i;\r\n        for (i = 0; i < 10; i++) {\r\n            arrayFive[i] = write4.nextInt();\r\n        }\r\n\r\n        System.out.println(\"Массив в обратном порядке:\");\r\n        for (i = arrayFive.length -1; i >= 0; i--){\r\n            System.out.println(arrayFive[i]);\r\n        }\r\n\r\n    }\r\n\r\n    public static void initializeArrayFive() throws IOException {\r\n\r\n        System.out.println(\"Задание 5\");\r\n\r\n        int[] arraySix = new int[20];\r\n        Scanner write5 = new Scanner(System.in);\r\n        System.out.println(\"Введите двадцать чисел:\");\r\n\r\n        for (i = 0; i < 20; i++) {\r\n            arraySix[i] = write5.nextInt();\r\n        }\r\n        int[] arraySeven = new int[10];\r\n        System.arraycopy(arraySix, 0, arraySeven, 0, 9);\r\n        //System.out.println(\"Первый массив из первых десяти чисел:\");\r\n        //for (int i = 0; i < arraySeven.length; i++)\r\n        //    System.out.println(arraySeven[i]);\r\n\r\n        int[] arrayEight = new int[10];\r\n        System.arraycopy(arraySix, 10, arrayEight, 0, 10);\r\n        System.out.println(\"Второй массив из последних десяти чисел:\");\r\n        for (i = 0; i < arraySeven.length; i++)\r\n            System.out.println(arrayEight[i]);\r\n    }\r\n\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartTwoAndFive/Main.java b/src/main/java/com/autoSchoolPartTwoAndFive/Main.java
+--- a/src/main/java/com/autoSchoolPartTwoAndFive/Main.java	
++++ b/src/main/java/com/autoSchoolPartTwoAndFive/Main.java	
+@@ -6,17 +6,23 @@
+ 
+ public class Main {
+ 
+-    private static int i;
++    public static int i;
++    public static int[] arrayOne;
+ 
+     public static void main(String[] args) throws Exception {
+-        Main.initializeArray();
+-        Main.initializeArrayTwo();
+-        Main.initializeArrayThree();
+-        Main.initializeArrayFour();
+-        Main.initializeArrayFive();
++        int[] one = initializeArray();
++        max(one, "LJHVBjh");
++
++        initializeArrayTwo();
++        initializeArrayThree();
++        initializeArrayFour();
++        initializeArrayFive();
+     }
+ 
+-    public static void initializeArray() throws IOException {   //метод initializeArray должен только создавать и возвращать массив. Ещё нужен дополнительный метод max(int[] array), который уже будет искать максимальное число. И его можно будет использовать много раз и в любом месте
++      public static int[] initializeArray() {
++        //метод initializeArray должен только создавать и возвращать массив.
++        // Ещё нужен дополнительный метод max(int[] array), который уже будет искать максимальное число.
++        // И его можно будет использовать много раз и в любом месте
+ 
+         System.out.println("Задание 1");
+         Scanner write = new Scanner(System.in);
+@@ -26,20 +32,25 @@
+         for (int i = 0; i < 20; i++) {
+             arrayOne[i] = write.nextInt();
+         }
+-        System.out.println("Ваш массив:");
+-        for (int i = 0; i < arrayOne.length; i++) {
+-            System.out.println(arrayOne[i]);
+-        }
++//        System.out.println("Ваш массив:");
++//        for (int i = 0; i < arrayOne.length; i++) {
++//            System.out.println(arrayOne[i]);
++//
++          return arrayOne;
++      }
++    public static void max(int[] two, String name) {
++        //int[] array = initializeArray();
+ 
+-        System.out.println("Длинна массива:" + arrayOne.length);    //зачем?))
+ 
+-        int max = arrayOne[0];
+-        for (int i = 1; i < arrayOne.length; i++) {
+-            if (arrayOne[i] > max)
+-                max = arrayOne[i];
++//        public static void max() throws IOException {
++            //int[] array = initializeArray();
++            //int[] array = new int[i];
++            int maxNum = two[0];
++        for (int i = 1; i < two.length; i++) {
++            if (two[i] > maxNum)
++                maxNum = two[i];
+         }
+-
+-        System.out.println("Максимальное значение равно: " + max);
++        System.out.println("Максимальное значение равно: " + maxNum + name);
+     }
+ 
+     public static void initializeArrayTwo() throws IOException {
+@@ -54,7 +65,9 @@
+             arrayTwo[t] = writeTwo.nextLine();
+         }
+         System.out.println("Массив в обратном порядке:");
+-        for (int t = 0; t < arrayTwo.length; t++) {     //усложнила. можно так: for (int t = array.length - 1; t >= 0; t--) То есть, цикл начнёт брать слова с последнего места в массиве
++        for (int t = 0; t < arrayTwo.length; t++) {
++            //усложнила. можно так: for (int t = array.length - 1; t >= 0; t--)
++            // То есть, цикл начнёт брать слова с последнего места в массиве
+             int j = arrayTwo.length - t - 1;
+ 
+             System.out.println(arrayTwo[j]);
+@@ -63,21 +76,21 @@
+ 
+     public static void initializeArrayThree() throws IOException {
+         System.out.println("Задание 3");
+-        String[] arrayThree = new String[10];   //arrayString и arrayInt было бы понятнее
+-        int[] arrayFour = new int[10];
++        String[] arrayString = new String[10];   //arrayString и arrayInt было бы понятнее
++        int[] arrayInt = new int[10];
+ 
+         Scanner write3 = new Scanner(System.in);
+         System.out.println("Введите десять строк:");
+         for (i = 0; i < 10; i++) {
+-            arrayThree[i] = write3.nextLine();
++            arrayString[i] = write3.nextLine();
+         }
+ 
+-        for (i = 0; i < arrayThree.length; i++) {
+-            arrayFour[i] = arrayThree[i].length();
++        for (i = 0; i < arrayString.length; i++) {
++            arrayInt[i] = arrayString[i].length();
+         }
+         System.out.println("Массив с длинами строк:");
+-        for (i = 0; i < arrayFour.length; i++)
+-            System.out.println(arrayFour[i]);
++        for (i = 0; i < arrayInt.length; i++)
++            System.out.println(arrayInt[i]);
+     }
+ 
+     public static void initializeArrayFour() throws IOException {
+@@ -91,12 +104,10 @@
+         for (i = 0; i < 10; i++) {
+             arrayFive[i] = write4.nextInt();
+         }
+-
+         System.out.println("Массив в обратном порядке:");
+-        for (i = arrayFive.length -1; i >= 0; i--){
++        for (i = arrayFive.length - 1; i >= 0; i--) {
+             System.out.println(arrayFive[i]);
+         }
+-
+     }
+ 
+     public static void initializeArrayFive() throws IOException {
+@@ -122,7 +133,6 @@
+         for (i = 0; i < arraySeven.length; i++)
+             System.out.println(arrayEight[i]);
+     }
+-
+ }
+ 
+ 
+Index: src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartTwoAndTwo.first;\r\n\r\nimport com.autoSchoolPartTwoAndTwo.com.welcome.Hellotwo;\r\n\r\npublic class MainTwo {\r\n\r\n    public static void main(String[] args) {\r\n        Hellotwo.setupName();\r\n        Hellotwo.welcome();\r\n        System.out.println(\"Hello World!\");\r\n        Hellotwo.byeBay();\r\n\r\n    }\r\n\r\n\r\n}\r\n// не забывай про форматирование (пробелы там всякие и тд). Можно просто нажать ctrl+alt+L и идея сама подправит. В остальных файлах я форматирование не буду трогать
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java b/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java
+--- a/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java	
++++ b/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java	
+@@ -1,6 +1,6 @@
+ package com.autoSchoolPartTwoAndTwo.first;
+ 
+-import com.autoSchoolPartTwoAndTwo.com.welcome.Hellotwo;
++import com.autoSchoolPartTwoAndTwo.com.welcome.*;
+ 
+ public class MainTwo {
+ 
+@@ -11,7 +11,5 @@
+         Hellotwo.byeBay();
+ 
+     }
+-
+-
+ }
+ // не забывай про форматирование (пробелы там всякие и тд). Можно просто нажать ctrl+alt+L и идея сама подправит. В остальных файлах я форматирование не буду трогать
+\ No newline at end of file
+Index: src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartTwoAndTwo.first;\r\nimport java.util.Scanner;\r\n\r\npublic class Hello {\r\n\r\n    public static void main(String[] args){\r\n        Hello.hello();             //можно просто метод вызывать hello(), ты же и так внутри класса Hello\r\n        Hello.printHelloName();\r\n\r\n    }\r\n\r\n    public static void printHelloName() {\r\n        Scanner in = new Scanner(System.in);\r\n        System.out.print(\"Введите имя: \");\r\n        String name = in.nextLine();\r\n        System.out.println(\"Hello,\" + name + \"!\");\r\n\r\n    }\r\n\r\n    public static void hello() {\r\n        System.out.println(\"Hello World!\");\r\n\r\n    }\r\n}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java b/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java
+--- a/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java	
++++ b/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java	
+@@ -4,8 +4,8 @@
+ public class Hello {
+ 
+     public static void main(String[] args){
+-        Hello.hello();             //можно просто метод вызывать hello(), ты же и так внутри класса Hello
+-        Hello.printHelloName();
++        hello();             //можно просто метод вызывать hello(), ты же и так внутри класса Hello
++        printHelloName();
+ 
+     }
+ 
+Index: src/main/java/com/autoSchoolPartTwoAndThree/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartTwoAndThree;\r\n\r\npublic class Main {\r\n\r\n    public static void main(String[] args) {\r\n\r\n        int q = 21;\r\n        int w = 8;\r\n        System.out.println(q + \" / \" + w + \" = \" + q / w + \" и \" + q % w + \" в остатке\");\r\n\r\n        int n = 99;\r\n        System.out.println(n / 10 + n % 10);\r\n\r\n\r\n        double m = 169.91;\r\n        System.out.println((int) (m + 0.5));\r\n\r\n        double s = 169.91;\r\n        int result = (int) Math.round(s);\r\n        System.out.println(result);\r\n\r\n        int a = 0;\r\n        int b = 2;\r\n        int c = 5;\r\n        a += b;\r\n        b = c - (a - b);\r\n        c = c + (c + (a - b)) + (a - (c + (a - b)));    //можно гораздо проще, подумай, что хранится у тебя в переменных к моменту, когда вычисляется с\r\n        System.out.println(\"a=\" + a + \", b=\" + b + \" и c=\" + c);\r\n// 58  89  158\r\n\r\n\r\n//лишние пустые строки желательно убирать\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartTwoAndThree/Main.java b/src/main/java/com/autoSchoolPartTwoAndThree/Main.java
+--- a/src/main/java/com/autoSchoolPartTwoAndThree/Main.java	
++++ b/src/main/java/com/autoSchoolPartTwoAndThree/Main.java	
+@@ -23,13 +23,12 @@
+         int b = 2;
+         int c = 5;
+         a += b;
+-        b = c - (a - b);
+-        c = c + (c + (a - b)) + (a - (c + (a - b)));    //можно гораздо проще, подумай, что хранится у тебя в переменных к моменту, когда вычисляется с
++        b = c - a + b;
++        // c = c + (c + (a - b)) + (a - (c + (a - b)));
++        c += a;
++        //можно гораздо проще,
++        // подумай, что хранится у тебя в переменных к моменту,
++        // когда вычисляется с
+         System.out.println("a=" + a + ", b=" + b + " и c=" + c);
+-// 58  89  158
+-
+-
+-//лишние пустые строки желательно убирать
+-
+     }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"27cda763-5f14-4c1e-ac6d-85fb69fb9b20\" name=\"Default Changelist\" comment=\"autoSchoolPartTwoAndTwo\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"e47d7a91-403f-425b-9be3-96e29f936c73\" />\r\n        <option name=\"url\" value=\"https://github.com/MasalovaNIX/autoSchool.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1rF7j1TDfDFWXHKeGMbt8dtIa6d\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"last_directory_selection\" value=\"$PROJECT_DIR$/src/main/java\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/main/java\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Project\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"IntelliLang.Configuration\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\masalova\\IdeaProjects\\autoSchool\\src\\main\\java\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.MainTwo\">\r\n    <configuration name=\"Hello (1)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchoolPartTwoAndTwo.first.Hello\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchoolPartTwoAndTwo.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Hello (2)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchool_2_2.first.Hello\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchool_2_2.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Hello\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchool_2_2.com.welcome.Hello\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchool_2_2.com.welcome.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Hellotwo\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchoolPartTwoAndTwo.com.welcome.Hellotwo\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchoolPartTwoAndTwo.com.welcome.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"AutoSchool\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MainTwo\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchoolPartTwoAndTwo.first.MainTwo\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchoolPartTwoAndTwo.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchoolPartTwoAndTwo.first.Main\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchoolPartTwoAndTwo.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchool_2_2.first.Main\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchool_2_2.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchool.first.Main\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchool.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.MainTwo\" />\r\n        <item itemvalue=\"Application.Hello (1)\" />\r\n        <item itemvalue=\"Application.Hello (2)\" />\r\n        <item itemvalue=\"Application.Hellotwo\" />\r\n        <item itemvalue=\"Application.Hello\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"27cda763-5f14-4c1e-ac6d-85fb69fb9b20\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1618560117159</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1618560117159</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"First commit\">\r\n      <created>1618563334782</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618563334782</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Add Hello\">\r\n      <created>1618581583612</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618581583612</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Add new hello\">\r\n      <created>1618836391356</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618836391356</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Add new hello\">\r\n      <created>1618846968537</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618846968537</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Add new hello\">\r\n      <created>1618847072390</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618847072390</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Working Hello\">\r\n      <created>1618847186470</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618847186470</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Working Hello\">\r\n      <created>1618847324216</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618847324216</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Working Hello\">\r\n      <created>1619013937005</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619013937005</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"autoSchoolPartTwoAndTwo\">\r\n      <created>1619101973617</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619101973617</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"autoSchoolPartTwoAndTwo\">\r\n      <created>1620390640329</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620390640329</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"autoSchoolPartTwoAndTwo\">\r\n      <created>1620393571769</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620393571769</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"12\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"First commit\" />\r\n    <MESSAGE value=\"Add folders\" />\r\n    <MESSAGE value=\"Add Hello\" />\r\n    <MESSAGE value=\"Add new hello\" />\r\n    <MESSAGE value=\"Working Hello\" />\r\n    <MESSAGE value=\"autoSchoolPartTwoAndTwo\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"autoSchoolPartTwoAndTwo\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,9 +1,31 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="27cda763-5f14-4c1e-ac6d-85fb69fb9b20" name="Default Changelist" comment="autoSchoolPartTwoAndTwo">
++    <list default="true" id="27cda763-5f14-4c1e-ac6d-85fb69fb9b20" name="Default Changelist" comment="Проверять autoSchoolPartTwo...">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/Main.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Circle.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Figures.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Figures.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Square.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Triangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Triangle.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndFive/Main.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndFour/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndFour/Main.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndSix/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndSix/Main.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndThree/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndThree/Main.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/com/welcome/Hellotwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/com/welcome/Hellotwo.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/first/MainTwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/first/MainTwo.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndFive/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndFive/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndFour/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndFour/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndSix/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndSix/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndThree/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndThree/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/com/welcome/Hellotwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/com/welcome/Hellotwo.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -65,13 +87,13 @@
+       <recent name="" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.MainTwo">
+-    <configuration name="Hello (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndTwo.first.Hello" />
++  <component name="RunManager" selected="Application.Main (4)">
++    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndThree.Main" />
+       <module name="AutoSchool" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="com.autoSchoolPartTwoAndTwo.first.*" />
++          <option name="PATTERN" value="com.autoSchoolPartTwoAndThree.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -79,12 +101,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Hello (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="com.autoSchool_2_2.first.Hello" />
++    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndSix.Main" />
+       <module name="AutoSchool" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="com.autoSchool_2_2.first.*" />
++          <option name="PATTERN" value="com.autoSchoolPartTwoAndSix.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -92,12 +114,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="com.autoSchool_2_2.com.welcome.Hello" />
++    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndFour.Main" />
+       <module name="AutoSchool" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="com.autoSchool_2_2.com.welcome.*" />
++          <option name="PATTERN" value="com.autoSchoolPartTwoAndFour.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -105,12 +127,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Hellotwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndTwo.com.welcome.Hellotwo" />
++    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndFive.Main" />
+       <module name="AutoSchool" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="com.autoSchoolPartTwoAndTwo.com.welcome.*" />
++          <option name="PATTERN" value="com.autoSchoolPartTwoAndFive.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -179,11 +201,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.Main (4)" />
++        <item itemvalue="Application.Main (3)" />
++        <item itemvalue="Application.Main (2)" />
++        <item itemvalue="Application.Main (1)" />
+         <item itemvalue="Application.MainTwo" />
+-        <item itemvalue="Application.Hello (1)" />
+-        <item itemvalue="Application.Hello (2)" />
+-        <item itemvalue="Application.Hellotwo" />
+-        <item itemvalue="Application.Hello" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -273,7 +295,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1620393571769</updated>
+     </task>
+-    <option name="localTasksCounter" value="12" />
++    <task id="LOCAL-00012" summary="Проверять autoSchoolPartTwo...">
++      <created>1620730182125</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1620730182125</updated>
++    </task>
++    <option name="localTasksCounter" value="13" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -295,7 +324,8 @@
+     <MESSAGE value="Add new hello" />
+     <MESSAGE value="Working Hello" />
+     <MESSAGE value="autoSchoolPartTwoAndTwo" />
+-    <option name="LAST_COMMIT_MESSAGE" value="autoSchoolPartTwoAndTwo" />
++    <MESSAGE value="Проверять autoSchoolPartTwo..." />
++    <option name="LAST_COMMIT_MESSAGE" value="Проверять autoSchoolPartTwo..." />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+Index: src/main/java/com/autoSchoolPartThreeAndSix/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartThreeAndSix;\r\n\r\npublic class Main {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartThreeAndSix/Main.java b/src/main/java/com/autoSchoolPartThreeAndSix/Main.java
+--- a/src/main/java/com/autoSchoolPartThreeAndSix/Main.java	
++++ b/src/main/java/com/autoSchoolPartThreeAndSix/Main.java	
+@@ -1,4 +1,8 @@
+ package com.autoSchoolPartThreeAndSix;
+-
++import com.autoSchoolPartThreeAndSix.figure.Square;
+ public class Main {
++    public static void main(String[] args) {
++       // Main.initializeArray();
++   // Main.Square.area();
++    }
+ }
+Index: src/main/java/com/autoSchoolPartTwoAndFour/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartTwoAndFour;\r\nimport java.util.Scanner;\r\n\r\npublic class Main {\r\n\r\n    private static String yourstring;   //зачем, если не используешь нигде?\r\n\r\n    public static void main(String[] args) {\r\n\r\n        Scanner in = new Scanner(System.in);\r\n        System.out.print(\"Введите два коротких предложения: \");\r\n        // Hello, world. Hello, fghfhg.\r\n        String yourstring = in.nextLine();  //не забывай про Соглашения по именованию в Java \"yourString\"\r\n        System.out.println(yourstring);\r\n\r\n        int length = yourstring.length();\r\n        System.out.println(\"Длина строки = \" + length);\r\n\r\n        char firsts = yourstring.charAt(0);\r\n        System.out.println(\"Первый символ = \" + firsts);\r\n\r\n        char last = yourstring.charAt(length-1);\r\n        System.out.println(\"Последний символ = \" + last);\r\n\r\n        if((length % 2 != 0))\r\n            System.out.println(\"Средний символ = \" + yourstring.substring((length-1)/2, length-((length-1)/2)));    //зачем substring, если нужен только один символ? charAt() прекрасно подходит для этой цели\r\n        else\r\n            System.out.println(\"Средний символ отсутствует \");\r\n\r\n        String part1 = yourstring.substring(0, yourstring.indexOf('.'));\r\n        System.out.println(\"Часть строки до первой встреченной точки, включая точку: \" + part1 + \".\");  //также предусмотрите вывод количества пробелов - ещё сказано в задании\r\n\r\n        Scanner in2 = new Scanner(System.in);   //объявила in2 и не используешь :)\r\n        System.out.print(\"Введите фрагмент строки, который Вы хотите заменить: \");\r\n        //Hello, world.\r\n        String yourstringpart = in.nextLine();  //yourStringPart - так гораздо читабельнее\r\n        System.out.println(yourstringpart);\r\n\r\n        Scanner in3 = new Scanner(System.in);\r\n        System.out.print(\"Введите новое предложение: \");\r\n        //Hello, people.\r\n        String yourstringchange = in.nextLine();\r\n        System.out.println(yourstringchange);\r\n\r\n        String replyourstring = yourstring.replace(yourstringpart, yourstringchange);\r\n        System.out.println(\"Новая строка: \" + replyourstring);\r\n\r\n\r\n        Scanner in4 = new Scanner(System.in);\r\n        System.out.print(\"Введите строку слов разделенных пробелами: \");\r\n        String yourstringwords = in.nextLine();\r\n        System.out.println(yourstringwords);\r\n        String [] word = yourstringwords.split(\" \");\r\n        String maxword = \"\";\r\n        for(int i = 0; i < word.length; i++)\r\n            if (word[i].length() >= maxword.length()) {\r\n                maxword = word[i];\r\n            }\r\n        System.out.println(\"Самое длинное слово в новой строке: \" + maxword);\r\n\r\n\r\n    }\r\n\r\n\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartTwoAndFour/Main.java b/src/main/java/com/autoSchoolPartTwoAndFour/Main.java
+--- a/src/main/java/com/autoSchoolPartTwoAndFour/Main.java	
++++ b/src/main/java/com/autoSchoolPartTwoAndFour/Main.java	
+@@ -3,64 +3,68 @@
+ 
+ public class Main {
+ 
+-    private static String yourstring;   //зачем, если не используешь нигде?
++    //private static String yourstring;
++    // зачем, если не используешь нигде?
+ 
+     public static void main(String[] args) {
+ 
+         Scanner in = new Scanner(System.in);
+         System.out.print("Введите два коротких предложения: ");
+         // Hello, world. Hello, fghfhg.
+-        String yourstring = in.nextLine();  //не забывай про Соглашения по именованию в Java "yourString"
+-        System.out.println(yourstring);
++        String yourString = in.nextLine();  //не забывай про Соглашения по именованию в Java "yourString"
++        System.out.println(yourString);
+ 
+-        int length = yourstring.length();
++        int length = yourString.length();
+         System.out.println("Длина строки = " + length);
+ 
+-        char firsts = yourstring.charAt(0);
++        char firsts = yourString.charAt(0);
+         System.out.println("Первый символ = " + firsts);
+ 
+-        char last = yourstring.charAt(length-1);
++        char last = yourString.charAt(length-1);
+         System.out.println("Последний символ = " + last);
+ 
+         if((length % 2 != 0))
+-            System.out.println("Средний символ = " + yourstring.substring((length-1)/2, length-((length-1)/2)));    //зачем substring, если нужен только один символ? charAt() прекрасно подходит для этой цели
++            //System.out.println("Средний символ = " + yourString.substring((length-1)/2, length-((length-1)/2)));
++            //зачем substring, если нужен только один символ? charAt() прекрасно подходит для этой цели
++            System.out.println("Средний символ = " + yourString.charAt((length-((length-1)/2))));
+         else
+             System.out.println("Средний символ отсутствует ");
+ 
+-        String part1 = yourstring.substring(0, yourstring.indexOf('.'));
+-        System.out.println("Часть строки до первой встреченной точки, включая точку: " + part1 + ".");  //также предусмотрите вывод количества пробелов - ещё сказано в задании
++        String part1 = yourString.substring(0, yourString.indexOf('.'));
++        System.out.println("Часть строки до первой встреченной точки, включая точку: " + part1 + ".");
++        //также предусмотрите вывод количества пробелов - ещё сказано в задании
++        int spacesNum = 0;
++            for (int i = 0; i < yourString.length(); i++) {
++                if(yourString.charAt(i) == ' '){
++                    spacesNum++;
++                }
++            }
++        System.out.println("Количество пробелов: " + spacesNum);
+ 
+-        Scanner in2 = new Scanner(System.in);   //объявила in2 и не используешь :)
+         System.out.print("Введите фрагмент строки, который Вы хотите заменить: ");
+         //Hello, world.
+-        String yourstringpart = in.nextLine();  //yourStringPart - так гораздо читабельнее
+-        System.out.println(yourstringpart);
++        String yourStringPart = in.nextLine();  //yourStringPart - так гораздо читабельнее
++        System.out.println(yourStringPart);
+ 
+-        Scanner in3 = new Scanner(System.in);
+-        System.out.print("Введите новое предложение: ");
++         System.out.print("Введите новое предложение: ");
+         //Hello, people.
+-        String yourstringchange = in.nextLine();
+-        System.out.println(yourstringchange);
++        String yourStringChange = in.nextLine();
++        System.out.println(yourStringChange);
+ 
+-        String replyourstring = yourstring.replace(yourstringpart, yourstringchange);
+-        System.out.println("Новая строка: " + replyourstring);
+-
++        String replyYourString = yourString.replace(yourStringPart, yourStringChange);
++        System.out.println("Новая строка: " + replyYourString);
+ 
+         Scanner in4 = new Scanner(System.in);
+         System.out.print("Введите строку слов разделенных пробелами: ");
+-        String yourstringwords = in.nextLine();
+-        System.out.println(yourstringwords);
+-        String [] word = yourstringwords.split(" ");
+-        String maxword = "";
++        String yourStringWords = in.nextLine();
++        System.out.println(yourStringWords);
++        String [] word = yourStringWords.split(" ");
++        String maxWord = "";
+         for(int i = 0; i < word.length; i++)
+-            if (word[i].length() >= maxword.length()) {
+-                maxword = word[i];
++            if (word[i].length() >= maxWord.length()) {
++                maxWord = word[i];
+             }
+-        System.out.println("Самое длинное слово в новой строке: " + maxword);
+-
+-
++        System.out.println("Самое длинное слово в новой строке: " + maxWord);
+     }
+-
+-
+ }
+ 
+Index: src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartThreeAndSix.figure;\r\n\r\npublic abstract class Figures {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java
+--- a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java	
++++ b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java	
+@@ -1,4 +1,12 @@
+ package com.autoSchoolPartThreeAndSix.figure;
+ 
+ public abstract class Figures {
++    private String name;
++    private int coordinateX,coordinateY;
++
++    public static int getCoordinates() {
++        return 0;
++    }
++
++    public abstract double area();
+ }
+Index: src/main/java/com/autoSchoolPartTwoAndSix/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartTwoAndSix;\r\n\r\nimport java.lang.Thread;\r\nimport java.util.Random;\r\nimport java.io.*;\r\nimport java.util.Scanner;\r\n\r\npublic class Main {\r\n\r\n\r\n    public static void main(String[] args) throws Exception {\r\n\r\n        Main.taskone();     //можно без Main и опять наименования\r\n        Main.tasktwo();\r\n        Main.taskthree();\r\n        Main.taskfour();\r\n        Main.taskfive();\r\n        Main.tasksix();\r\n        Main.taskseven();\r\n        Main.taskeight();\r\n        Main.tasknine();\r\n        Main.taskten();\r\n        Main.taskeleven();\r\n        Main.tasktwelve();\r\n        Main.taskthirteen();\r\n        Main.taskfourteen();\r\n        Main.taskfifteen();\r\n        Main.tasksixteen();\r\n        Main.taskseventeen();\r\n        Main.taskeightteen();\r\n\r\n    }\r\n\r\n    public static void taskone() throws IOException {\r\n\r\n        System.out.println(\"Task 1\");\r\n\r\n        Scanner one = new Scanner(System.in);\r\n        System.out.println(\"Enter two numbers:\");\r\n        int a = one.nextInt();\r\n        int b = one.nextInt();\r\n        if (a < b) {\r\n            System.out.println(\"Min is \" + a);      //просто для справки, можно так записать if: int min = (a < b) ? a : b;\r\n        } else {\r\n            System.out.println(\"Min is \" + b);\r\n        }\r\n    }\r\n\r\n    public static void tasktwo() throws IOException {\r\n        System.out.println(\"Task 2\");\r\n\r\n        Scanner two = new Scanner(System.in);\r\n        System.out.println(\"Enter four numbers:\");\r\n        int max = Integer.MIN_VALUE;\r\n        for (int i = 0; i < 4; ++i) {\r\n            int x = two.nextInt();\r\n            if (x > max)\r\n                max = x;\r\n        }\r\n        System.out.println(\"Max is \" + max);\r\n    }\r\n\r\n    public static void taskthree() throws IOException {\r\n        System.out.println(\"Task 3\");\r\n\r\n        Scanner two = new Scanner(System.in);\r\n        System.out.println(\"Enter three numbers:\");\r\n\r\n        int x = two.nextInt();\r\n        int y = two.nextInt();\r\n        int z = two.nextInt();\r\n        if (x >= y && x >= z && y > z) {\r\n            System.out.println(\"Numbers in descending order: \" + x + \" \" + y + \" \" + z);\r\n        } else if (x >= y && z >= y && x >= z) {\r\n            System.out.println(\"Numbers in descending order: \" + x + \" \" + z + \" \" + y);\r\n        } else if (y >= x && y >= z && x >= z) {\r\n            System.out.println(\"Numbers in descending order: \" + y + \" \" + x + \" \" + z);\r\n        } else if (y >= x && y >= z && z >= x) {\r\n            System.out.println(\"Numbers in descending order: \" + y + \" \" + z + \" \" + x);\r\n        } else if (z >= x && z >= y && x >= y) {\r\n            System.out.println(\"Numbers in descending order: \" + z + \" \" + x + \" \" + y);\r\n        } else if (z >= x && z >= y && y >= x) {\r\n            System.out.println(\"Numbers in descending order: \" + z + \" \" + y + \" \" + x);        //с учётом, что задача на условные операторы - годится. Но в реальном проекте лучше засунуть всё в массив и отсортировать\r\n        }\r\n    }\r\n\r\n    public static void taskfour() throws IOException {\r\n        System.out.println(\"Task 4\");\r\n\r\n        Scanner first = new Scanner(System.in);\r\n        System.out.println(\"Enter first name:\");\r\n        String s1 = first.nextLine();\r\n\r\n        Scanner second = new Scanner(System.in);\r\n        System.out.println(\"Enter second name:\");\r\n        String s2 = second.nextLine();\r\n\r\n        if (s1.length() == s2.length()) {\r\n            System.out.println(\"Lengths of names are equals.\");\r\n            for (int i = 0; i < s1.length(); i++) {\r\n                char c1 = s1.charAt(i);\r\n                char c2 = s2.charAt(i);\r\n\r\n                if (c1 != c2) {     // if (s1.equals(s2))\r\n                    System.out.println(\"Names aren't equals.\");\r\n                    return;\r\n                }\r\n            }\r\n            System.out.println(\"Names are equals.\");\r\n            return;\r\n        }\r\n        System.out.println(\"Names aren't equals.\");\r\n    }\r\n\r\n    public static void taskfive() throws IOException {\r\n        System.out.println(\"Task 5\");\r\n\r\n        Scanner first = new Scanner(System.in);\r\n        System.out.println(\"Enter name:\");\r\n        String s1 = first.nextLine();\r\n\r\n        Scanner second = new Scanner(System.in);\r\n        System.out.println(\"Enter age:\");\r\n        int s2 = second.nextInt();\r\n\r\n        if (s2 < 18) {\r\n            System.out.println(\"Подрасти еще\");\r\n        }\r\n        System.out.println(\"Go next.\");\r\n    }\r\n\r\n    public static void tasksix() throws IOException {\r\n        System.out.println(\"Task 6\");\r\n\r\n        Scanner first = new Scanner(System.in);\r\n        System.out.println(\"Enter name:\");\r\n        String s1 = first.nextLine();\r\n\r\n        Scanner second = new Scanner(System.in);\r\n        System.out.println(\"Enter age:\");\r\n        int s2 = second.nextInt();\r\n\r\n        if (s2 > 18) {      //а если 18?\r\n            System.out.println(\"И 18-ти достаточно\");\r\n        }\r\n        System.out.println(\"Go next.\");\r\n    }\r\n\r\n    public static void taskseven() throws IOException {\r\n        System.out.println(\"Task 7\");\r\n\r\n        Random random = new Random();\r\n        int secret;\r\n        // Генерируем число от 0 до 20\r\n        secret = random.nextInt(20 + 1);\r\n        System.out.println(secret); //я выигрываю в каждой игре с первой попытки ))\r\n\r\n        Scanner first = new Scanner(System.in);\r\n        System.out.println(\"Угадай число\");\r\n        System.out.println(\"7 попыток\");\r\n        System.out.println(\"Начинай\");\r\n        int num1;\r\n        for (int i = 0; i < 7; i++) {\r\n            num1 = first.nextInt();\r\n            if (num1 == secret) {\r\n                i = 7;      //хитро, но есть же break\r\n                System.out.println(\"Выиграл\");\r\n            }\r\n            if (num1 < secret) {\r\n                System.out.println(\"Мало\");\r\n            }\r\n            if (num1 > secret) {\r\n                System.out.println(\"Много\");\r\n            }\r\n            if (num1 != secret) {\r\n                if (i == 6) {\r\n                    System.out.println(\"Проиграл\");\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    public static void taskeight() throws IOException {\r\n        System.out.println(\"Task 8\");\r\n        int i = 1;\r\n        while (i < 11) {\r\n            System.out.println(i);\r\n            i++;\r\n        }\r\n\r\n\r\n    }\r\n\r\n    public static void tasknine() throws IOException {\r\n        System.out.println(\"Task 9\");\r\n        int i = 10;\r\n        while (i >= 1) {\r\n            System.out.println(i);\r\n            i--;\r\n        }\r\n    }\r\n\r\n    public static void taskten() throws IOException {\r\n        System.out.println(\"Task 10\");\r\n\r\n        Scanner first = new Scanner(System.in);\r\n        System.out.println(\"Enter string:\");\r\n        String s1 = first.nextLine();\r\n\r\n        Scanner second = new Scanner(System.in);\r\n        System.out.println(\"Enter number:\");\r\n        int s2 = second.nextInt();\r\n\r\n        int i = s2;     //почему бы сразу не объявить int i = second.nextInt();\r\n        while (i > 0) { //while (i <= s1) i++ - так будет правильнее и красивее\r\n            System.out.println(s1);\r\n            i--;\r\n\r\n        }\r\n    }\r\n\r\n    public static void taskeleven() {\r\n        System.out.println(\"Task 11\");\r\n        int i = 0;\r\n        while (i < 10) {\r\n            int j = 1;\r\n            while (j < 10) {\r\n                System.out.print(\"S\");\r\n                j++;\r\n            }\r\n            System.out.println(\"S\");\r\n            i++;\r\n        }\r\n    }\r\n\r\n    public static void tasktwelve() throws IOException {\r\n        System.out.println(\"Task 12\");\r\n        int i = 0;\r\n        while (i < 11) {\r\n            int j;\r\n            j = i * 10;\r\n            i++;\r\n            System.out.println(\" \" + j);    //не очень похоже на таблицу умножения ))\r\n        }\r\n    }\r\n\r\n    public static void taskthirteen() throws IOException {\r\n        System.out.println(\"Task 13\");\r\n\r\n        for (int i = 2; i <= 100; i++)\r\n            if (i % 2 == 0)\r\n                System.out.print(\" \" + i);\r\n\r\n    }\r\n\r\n    public static void taskfourteen() throws IOException {\r\n        //System.out.println(\"\");\r\n        System.out.println(\"Task 14\\n\");\r\n\r\n        Scanner first = new Scanner(System.in);\r\n        System.out.println(\"Enter height:\");\r\n        int h = first.nextInt();\r\n\r\n        Scanner second = new Scanner(System.in);\r\n        System.out.println(\"Enter length:\");\r\n        int l = second.nextInt();\r\n\r\n        for (int i = 0; i < h; i++) {\r\n            for (int j = 1; j < l; j++) {\r\n                System.out.print(\"8\");\r\n            }\r\n            System.out.println(\"8\");\r\n        }\r\n    }\r\n\r\n    public static void taskfifteen() throws IOException {\r\n        System.out.println(\"\");\r\n        System.out.println(\"Task 15\");\r\n\r\n        for (int i = 0; i < 10; i++) {\r\n            for (int j = i; j > 0; j--) {\r\n                System.out.print(\"8\");\r\n            }\r\n            System.out.println(\"8\");\r\n        }\r\n    }\r\n\r\n    public static void tasksixteen() throws IOException {\r\n        System.out.println(\"Task 16\");\r\n\r\n        for (int i = 0; i < 10; i++) {\r\n            System.out.print(\"8 \");\r\n        }\r\n        System.out.println(\"\");\r\n        for (int j = 0; j < 10; j++) {\r\n            System.out.println(\"8\");\r\n        }\r\n    }\r\n\r\n    public static void taskseventeen() throws IOException {\r\n        System.out.println(\"Task 17\");\r\n\r\n        Scanner first = new Scanner(System.in);\r\n        System.out.println(\"Enter name:\");\r\n        String h = first.nextLine();\r\n        for (int i = 0; i < 10; i++) {\r\n            System.out.println(h + \" любит меня)\");\r\n        }\r\n    }\r\n\r\n    public static void taskeightteen() throws InterruptedException {\r\n        System.out.println(\"Task 18\");\r\n        for (int i = 30; i >= 0; i--) {\r\n            Thread.sleep(100); //задержка на одну десятую секунды.\r\n            System.out.println(i);\r\n        }\r\n        System.out.println(\"Бум!\");\r\n    }\r\n\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartTwoAndSix/Main.java b/src/main/java/com/autoSchoolPartTwoAndSix/Main.java
+--- a/src/main/java/com/autoSchoolPartTwoAndSix/Main.java	
++++ b/src/main/java/com/autoSchoolPartTwoAndSix/Main.java	
+@@ -7,31 +7,30 @@
+ 
+ public class Main {
+ 
+-
+     public static void main(String[] args) throws Exception {
+ 
+-        Main.taskone();     //можно без Main и опять наименования
+-        Main.tasktwo();
+-        Main.taskthree();
+-        Main.taskfour();
+-        Main.taskfive();
+-        Main.tasksix();
+-        Main.taskseven();
+-        Main.taskeight();
+-        Main.tasknine();
+-        Main.taskten();
+-        Main.taskeleven();
+-        Main.tasktwelve();
+-        Main.taskthirteen();
+-        Main.taskfourteen();
+-        Main.taskfifteen();
+-        Main.tasksixteen();
+-        Main.taskseventeen();
+-        Main.taskeightteen();
++        taskOne();     //можно без Main и опять наименования
++        taskTwo();
++        taskThree();
++        taskFour();
++        taskFive();
++        taskSix();
++        taskSeven();
++        taskEight();
++        taskNine();
++        taskTen();
++        taskEleven();
++        taskTwelve();
++        taskThirteen();
++        taskFourteen();
++        taskFifteen();
++        taskSixteen();
++        taskSeventeen();
++        taskEightteen();
+ 
+     }
+ 
+-    public static void taskone() throws IOException {
++    public static void taskOne() throws IOException {
+ 
+         System.out.println("Task 1");
+ 
+@@ -40,13 +39,14 @@
+         int a = one.nextInt();
+         int b = one.nextInt();
+         if (a < b) {
+-            System.out.println("Min is " + a);      //просто для справки, можно так записать if: int min = (a < b) ? a : b;
++            System.out.println("Min is " + a);
++            //просто для справки, можно так записать if: int min = (a < b) ? a : b;
+         } else {
+             System.out.println("Min is " + b);
+         }
+     }
+ 
+-    public static void tasktwo() throws IOException {
++    public static void taskTwo() throws IOException {
+         System.out.println("Task 2");
+ 
+         Scanner two = new Scanner(System.in);
+@@ -60,7 +60,7 @@
+         System.out.println("Max is " + max);
+     }
+ 
+-    public static void taskthree() throws IOException {
++    public static void taskThree() throws IOException {
+         System.out.println("Task 3");
+ 
+         Scanner two = new Scanner(System.in);
+@@ -80,11 +80,13 @@
+         } else if (z >= x && z >= y && x >= y) {
+             System.out.println("Numbers in descending order: " + z + " " + x + " " + y);
+         } else if (z >= x && z >= y && y >= x) {
+-            System.out.println("Numbers in descending order: " + z + " " + y + " " + x);        //с учётом, что задача на условные операторы - годится. Но в реальном проекте лучше засунуть всё в массив и отсортировать
++            System.out.println("Numbers in descending order: " + z + " " + y + " " + x);
++            //с учётом, что задача на условные операторы - годится.
++            // Но в реальном проекте лучше засунуть всё в массив и отсортировать
+         }
+     }
+ 
+-    public static void taskfour() throws IOException {
++    public static void taskFour() throws IOException {
+         System.out.println("Task 4");
+ 
+         Scanner first = new Scanner(System.in);
+@@ -98,21 +100,18 @@
+         if (s1.length() == s2.length()) {
+             System.out.println("Lengths of names are equals.");
+             for (int i = 0; i < s1.length(); i++) {
+-                char c1 = s1.charAt(i);
+-                char c2 = s2.charAt(i);
+-
+-                if (c1 != c2) {     // if (s1.equals(s2))
+-                    System.out.println("Names aren't equals.");
+-                    return;
+-                }
+-            }
+-            System.out.println("Names are equals.");
++                if (s1.equals(s2)) {
++                    System.out.println("Names are equals.");
++                    return;
++                }
++            }
++            System.out.println("Names aren't equals.");
+             return;
+         }
+         System.out.println("Names aren't equals.");
+     }
+ 
+-    public static void taskfive() throws IOException {
++    public static void taskFive() throws IOException {
+         System.out.println("Task 5");
+ 
+         Scanner first = new Scanner(System.in);
+@@ -124,12 +123,14 @@
+         int s2 = second.nextInt();
+ 
+         if (s2 < 18) {
+-            System.out.println("Подрасти еще");
++            System.out.println("Подрасти еще.");
+         }
+-        System.out.println("Go next.");
++        if (s2 >= 18) {
++            System.out.println("Поздравляю, Вы - совершеннолетний.");
++        }
+     }
+ 
+-    public static void tasksix() throws IOException {
++    public static void taskSix() throws IOException {
+         System.out.println("Task 6");
+ 
+         Scanner first = new Scanner(System.in);
+@@ -139,21 +140,26 @@
+         Scanner second = new Scanner(System.in);
+         System.out.println("Enter age:");
+         int s2 = second.nextInt();
+-
++        if (s2 == 18) {
++            System.out.println("18-норм, но лучше не надо.");
++        }
+         if (s2 > 18) {      //а если 18?
+-            System.out.println("И 18-ти достаточно");
++            System.out.println("И 18-ти достаточно.");
++
+         }
+-        System.out.println("Go next.");
++        System.out.println("Поздравляю, Вы - несовершеннолетний.");
+     }
+ 
+-    public static void taskseven() throws IOException {
++
++    public static void taskSeven() throws InterruptedException {
+         System.out.println("Task 7");
+ 
+         Random random = new Random();
+         int secret;
+         // Генерируем число от 0 до 20
+         secret = random.nextInt(20 + 1);
+-        System.out.println(secret); //я выигрываю в каждой игре с первой попытки ))
++        System.out.println("Сделайте вид, что не видите это число: " + secret);
++        //я выигрываю в каждой игре с первой попытки ))
+ 
+         Scanner first = new Scanner(System.in);
+         System.out.println("Угадай число");
+@@ -162,10 +168,6 @@
+         int num1;
+         for (int i = 0; i < 7; i++) {
+             num1 = first.nextInt();
+-            if (num1 == secret) {
+-                i = 7;      //хитро, но есть же break
+-                System.out.println("Выиграл");
+-            }
+             if (num1 < secret) {
+                 System.out.println("Мало");
+             }
+@@ -177,21 +179,24 @@
+                     System.out.println("Проиграл");
+                 }
+             }
+-        }
++            if (num1 == secret) {
++                //i = 7;      //хитро, но есть же break
++                System.out.println("Выиграл");
++                break;
++            }
++        } Thread.sleep(1800);
+     }
+ 
+-    public static void taskeight() throws IOException {
++    public static void taskEight() throws IOException {
+         System.out.println("Task 8");
+         int i = 1;
+         while (i < 11) {
+             System.out.println(i);
+             i++;
+         }
+-
+-
+     }
+ 
+-    public static void tasknine() throws IOException {
++    public static void taskNine() throws IOException {
+         System.out.println("Task 9");
+         int i = 10;
+         while (i >= 1) {
+@@ -200,7 +205,7 @@
+         }
+     }
+ 
+-    public static void taskten() throws IOException {
++    public static void taskTen() throws InterruptedException {
+         System.out.println("Task 10");
+ 
+         Scanner first = new Scanner(System.in);
+@@ -210,16 +215,18 @@
+         Scanner second = new Scanner(System.in);
+         System.out.println("Enter number:");
+         int s2 = second.nextInt();
+-
+-        int i = s2;     //почему бы сразу не объявить int i = second.nextInt();
+-        while (i > 0) { //while (i <= s1) i++ - так будет правильнее и красивее
++        while (s2 > 0) {
+             System.out.println(s1);
+-            i--;
+-
++            s2--;
++            //почему бы сразу не объявить int i = second.nextInt();
++            //убрала вообще i
++            ////while (i <= s1) i++ - так будет правильнее и красивее
++            //s1 - это ж стринга? и тогда i задавать как 0 первоначально
+         }
++        Thread.sleep(1800);
+     }
+ 
+-    public static void taskeleven() {
++    public static void taskEleven() {
+         System.out.println("Task 11");
+         int i = 0;
+         while (i < 10) {
+@@ -233,29 +240,34 @@
+         }
+     }
+ 
+-    public static void tasktwelve() throws IOException {
++    public static void taskTwelve() throws IOException {
+         System.out.println("Task 12");
+-        int i = 0;
+-        while (i < 11) {
+-            int j;
+-            j = i * 10;
+-            i++;
+-            System.out.println(" " + j);    //не очень похоже на таблицу умножения ))
++//        int i = 0;
++//        while (i < 11) {
++//            int j;
++//            j = i * 10;
++//            i++;
++//            System.out.print(" " + j);
++// не очень похоже на таблицу умножения ))
++// не правильно поняла задание, делала тольно на 10
++        for (int i = 1; i <= 10; i++) {
++            for (int j = 1; j <= 10; j++) {
++                System.out.print(" " + (i * j));
++            }
++            System.out.println();
+         }
+     }
+ 
+-    public static void taskthirteen() throws IOException {
++    public static void taskThirteen() throws IOException {
+         System.out.println("Task 13");
+ 
+         for (int i = 2; i <= 100; i++)
+             if (i % 2 == 0)
+                 System.out.print(" " + i);
+-
+     }
+ 
+-    public static void taskfourteen() throws IOException {
+-        //System.out.println("");
+-        System.out.println("Task 14\n");
++    public static void taskFourteen() throws IOException {
++        System.out.println("\nTask 14");
+ 
+         Scanner first = new Scanner(System.in);
+         System.out.println("Enter height:");
+@@ -273,8 +285,7 @@
+         }
+     }
+ 
+-    public static void taskfifteen() throws IOException {
+-        System.out.println("");
++    public static void taskFifteen() throws IOException {
+         System.out.println("Task 15");
+ 
+         for (int i = 0; i < 10; i++) {
+@@ -285,9 +296,8 @@
+         }
+     }
+ 
+-    public static void tasksixteen() throws IOException {
++    public static void taskSixteen() throws IOException {
+         System.out.println("Task 16");
+-
+         for (int i = 0; i < 10; i++) {
+             System.out.print("8 ");
+         }
+@@ -297,7 +307,7 @@
+         }
+     }
+ 
+-    public static void taskseventeen() throws IOException {
++    public static void taskSeventeen() throws IOException {
+         System.out.println("Task 17");
+ 
+         Scanner first = new Scanner(System.in);
+@@ -308,7 +318,7 @@
+         }
+     }
+ 
+-    public static void taskeightteen() throws InterruptedException {
++    public static void taskEightteen() throws InterruptedException {
+         System.out.println("Task 18");
+         for (int i = 30; i >= 0; i--) {
+             Thread.sleep(100); //задержка на одну десятую секунды.
+Index: src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartThreeAndSix.figure;\r\n\r\npublic class Triangle extends Figures {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java
+--- a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java	
++++ b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java	
+@@ -1,4 +1,15 @@
+ package com.autoSchoolPartThreeAndSix.figure;
+ 
+ public class Triangle extends Figures {
++
++    private String name;
++    private int coordinateX,coordinateY;
++
++    public static int getCoordinates() {
++        return 0;
++    }
++
++    public double area() {
++        return 0;
++    }
+ }
+Index: src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartThreeAndSix.figure;\r\n\r\npublic class Circle extends Figures {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java
+--- a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java	
++++ b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java	
+@@ -1,4 +1,15 @@
+ package com.autoSchoolPartThreeAndSix.figure;
+ 
+ public class Circle extends Figures {
++
++    private String name;
++    private int coordinateX,coordinateY;
++
++    public static int getCoordinates() {
++        return 0;
++    }
++
++    public double area() {
++        return 0;
++    }
+ }
+Index: src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartThreeAndSix.figure;\r\n\r\npublic class Square extends Figures{\r\n\r\n    private String name;\r\n    private double area;\r\n    private double b;\r\n    private double a;\r\n\r\n    public Square(String name, double a, double b) {\r\n        this.name = name;\r\n\r\n    }\r\n    public double area(){\r\n        return a * b;\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java
+--- a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java	
++++ b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java	
+@@ -1,18 +1,50 @@
+ package com.autoSchoolPartThreeAndSix.figure;
++import java.lang.Thread;
++import java.util.Random;
++import java.io.*;
++import java.util.Scanner;
+ 
+-public class Square extends Figures{
++public abstract class Square extends Figures{
+ 
++    private static Random random;
++    private static int coordinate;
+     private String name;
+-    private double area;
+-    private double b;
+-    private double a;
++    //private int coordinate;
++    private int coordinateX,coordinateY;
++    //private Random random;
++    //private double secret;
++
++    public static void main(String[] args) {
+ 
+-    public Square(String name, double a, double b) {
+-        this.name = name;
++        //System.out.println(arrayOne[i]);
++        Square.getCoordinates();
+ 
+     }
+-    public double area(){
+-        return a * b;
+-    }
++
++//    public static double setCoordinates() {
++//        int [] arrayOne = new int[8];
++//        coordinate = random.nextInt(100 + 1);
++//        for (i = 0; i < 100; i++) {
++//            arrayOne[i] = coordinate.nextInt();
++//
++//        //return 0;
++//        System.out.println(arrayOne[i]);
++//        //return coordinate;
++//    }
++//
++//    public static int getCoordinates() {
++//        //        return secret;
++//        return 0;
++//    }
++
+ 
+-}
++//    public Square(String name, double area) {
++//        this.name = name;
++//    }
++//
++//   public double area(){
++//    return 0;
++//       return  ((x1y2-y2x1) + (x2y3-y2x3) + (x3y4-y3x4) + (x4y1-y4x1) )/2;
++   }
++
++
+Index: src/main/java/com/autoSchoolPartTwoAndTwo/com/welcome/Hellotwo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartTwoAndTwo.com.welcome;\r\nimport java.util.Scanner;\r\n\r\npublic class Hellotwo {\r\n\r\n    private static String userName;\r\n\r\n    public static void main(String[] args){  //не совсем понимаю, зачем здесь тоже вызываешь методы? Это же вспомогательный класс, а все вызовы в MainTwo уже идут\r\n        Hellotwo.setupName();\r\n        Hellotwo.welcome();\r\n        Hellotwo.byeBay();\r\n\r\n    }\r\n\r\n\r\n    public static void setupName() {\r\n        Scanner in = new Scanner(System.in);\r\n        System.out.print(\"Введите имя: \");\r\n        userName = in.nextLine();\r\n\r\n    }\r\n\r\n    public static void welcome() {\r\n\r\n        System.out.println(\"Hello,\" + userName + \".\");\r\n    }\r\n    public static void byeBay() {\r\n\r\n        System.out.println(\"Bye,\" + userName + \".\");\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartTwoAndTwo/com/welcome/Hellotwo.java b/src/main/java/com/autoSchoolPartTwoAndTwo/com/welcome/Hellotwo.java
+--- a/src/main/java/com/autoSchoolPartTwoAndTwo/com/welcome/Hellotwo.java	
++++ b/src/main/java/com/autoSchoolPartTwoAndTwo/com/welcome/Hellotwo.java	
+@@ -5,13 +5,13 @@
+ 
+     private static String userName;
+ 
+-    public static void main(String[] args){  //не совсем понимаю, зачем здесь тоже вызываешь методы? Это же вспомогательный класс, а все вызовы в MainTwo уже идут
+-        Hellotwo.setupName();
+-        Hellotwo.welcome();
+-        Hellotwo.byeBay();
+-
++    public static void main(String[] args){
++        //не совсем понимаю, зачем здесь тоже вызываешь методы?
++        // Это же вспомогательный класс, а все вызовы в MainTwo уже идут
++//        Hellotwo.setupName();
++//        Hellotwo.welcome();
++//        Hellotwo.byeBay();
+     }
+-
+ 
+     public static void setupName() {
+         Scanner in = new Scanner(System.in);

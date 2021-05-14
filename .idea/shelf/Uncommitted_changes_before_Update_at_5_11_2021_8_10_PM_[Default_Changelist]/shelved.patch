@@ -1,0 +1,302 @@
+Index: src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartThreeAndSix.figure;\r\n\r\npublic abstract class Figures {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java
+--- a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java	(revision 7324bba2c2297ae3d0890ab35e9b9a68b3b06d62)
++++ b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java	(date 1620748969055)
+@@ -1,4 +1,12 @@
+ package com.autoSchoolPartThreeAndSix.figure;
+ 
+ public abstract class Figures {
++    private String name;
++    private int coordinateX,coordinateY;
++
++    public static int getCoordinates() {
++        return 0;
++    }
++
++    public abstract double area();
+ }
+Index: src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartThreeAndSix.figure;\r\n\r\npublic class Triangle extends Figures {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java
+--- a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java	(revision 7324bba2c2297ae3d0890ab35e9b9a68b3b06d62)
++++ b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java	(date 1620748969046)
+@@ -1,4 +1,15 @@
+ package com.autoSchoolPartThreeAndSix.figure;
+ 
+ public class Triangle extends Figures {
++
++    private String name;
++    private int coordinateX,coordinateY;
++
++    public static int getCoordinates() {
++        return 0;
++    }
++
++    public double area() {
++        return 0;
++    }
+ }
+Index: src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartThreeAndSix.figure;\r\n\r\npublic class Square extends Figures{\r\n\r\n    private String name;\r\n    private double area;\r\n    private double b;\r\n    private double a;\r\n\r\n    public Square(String name, double a, double b) {\r\n        this.name = name;\r\n\r\n    }\r\n    public double area(){\r\n        return a * b;\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java
+--- a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java	(revision 7324bba2c2297ae3d0890ab35e9b9a68b3b06d62)
++++ b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java	(date 1620749962221)
+@@ -1,18 +1,50 @@
+ package com.autoSchoolPartThreeAndSix.figure;
++import java.lang.Thread;
++import java.util.Random;
++import java.io.*;
++import java.util.Scanner;
+ 
+-public class Square extends Figures{
++public abstract class Square extends Figures{
+ 
++    private static Random random;
++    private static int coordinate;
+     private String name;
+-    private double area;
+-    private double b;
+-    private double a;
++    //private int coordinate;
++    private int coordinateX,coordinateY;
++    //private Random random;
++    //private double secret;
++
++    public static void main(String[] args) {
++
++        System.out.println(arrayOne[i]);
++        Square.getCoordinates();
++
++    }
+ 
+-    public Square(String name, double a, double b) {
+-        this.name = name;
++    public static double setCoordinates() {
++        int [] arrayOne = new int[8];
++        coordinate = random.nextInt(100 + 1);
++        for (i = 0; i < 100; i++) {
++            arrayOne[i] = coordinate.nextInt();
+ 
++        //return 0;
++        System.out.println(arrayOne[i]);
++        //return coordinate;
+     }
+-    public double area(){
+-        return a * b;
++
++    public static int getCoordinates() {
++        //        return secret;
++        return 0;
+     }
+ 
+-}
++
++//    public Square(String name, double area) {
++//        this.name = name;
++//    }
++//
++//   public double area(){
++//    return 0;
++//       return  ((x1y2-y2x1) + (x2y3-y2x3) + (x3y4-y3x4) + (x4y1-y4x1) )/2;
++   }
++
++
+Index: src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartThreeAndSix.figure;\r\n\r\npublic class Circle extends Figures {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java
+--- a/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java	(revision 7324bba2c2297ae3d0890ab35e9b9a68b3b06d62)
++++ b/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java	(date 1620748969051)
+@@ -1,4 +1,15 @@
+ package com.autoSchoolPartThreeAndSix.figure;
+ 
+ public class Circle extends Figures {
++
++    private String name;
++    private int coordinateX,coordinateY;
++
++    public static int getCoordinates() {
++        return 0;
++    }
++
++    public double area() {
++        return 0;
++    }
+ }
+Index: src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartTwoAndTwo.first;\r\nimport com.autoSchoolPartTwoAndTwo.com.welcome.Hellotwo;\r\n\r\npublic class MainTwo {\r\n\r\n    public static void main(String[] args){\r\n        Hellotwo.setupName();\r\n        Hellotwo.welcome();\r\n        System. out.println(\"Hello World!\");\r\n        Hellotwo.byeBay();\r\n\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java b/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java
+--- a/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java	(revision 7324bba2c2297ae3d0890ab35e9b9a68b3b06d62)
++++ b/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java	(date 1620747189956)
+@@ -1,5 +1,5 @@
+ package com.autoSchoolPartTwoAndTwo.first;
+-import com.autoSchoolPartTwoAndTwo.com.welcome.Hellotwo;
++import com.autoSchoolPartTwoAndTwo.com.welcome.*;
+ 
+ public class MainTwo {
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"27cda763-5f14-4c1e-ac6d-85fb69fb9b20\" name=\"Default Changelist\" comment=\"autoSchoolPartTwoAndTwo\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"e47d7a91-403f-425b-9be3-96e29f936c73\" />\r\n        <option name=\"url\" value=\"https://github.com/MasalovaNIX/autoSchool.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1rF7j1TDfDFWXHKeGMbt8dtIa6d\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"last_directory_selection\" value=\"$PROJECT_DIR$/src/main/java\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/main/java\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Project\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"IntelliLang.Configuration\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\masalova\\IdeaProjects\\autoSchool\\src\\main\\java\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.MainTwo\">\r\n    <configuration name=\"Hello (1)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchoolPartTwoAndTwo.first.Hello\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchoolPartTwoAndTwo.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Hello (2)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchool_2_2.first.Hello\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchool_2_2.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Hello\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchool_2_2.com.welcome.Hello\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchool_2_2.com.welcome.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Hellotwo\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchoolPartTwoAndTwo.com.welcome.Hellotwo\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchoolPartTwoAndTwo.com.welcome.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"AutoSchool\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MainTwo\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchoolPartTwoAndTwo.first.MainTwo\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchoolPartTwoAndTwo.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchoolPartTwoAndTwo.first.Main\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchoolPartTwoAndTwo.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchool_2_2.first.Main\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchool_2_2.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.autoSchool.first.Main\" />\r\n      <module name=\"AutoSchool\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.autoSchool.first.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.MainTwo\" />\r\n        <item itemvalue=\"Application.Hello (1)\" />\r\n        <item itemvalue=\"Application.Hello (2)\" />\r\n        <item itemvalue=\"Application.Hellotwo\" />\r\n        <item itemvalue=\"Application.Hello\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"27cda763-5f14-4c1e-ac6d-85fb69fb9b20\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1618560117159</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1618560117159</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"First commit\">\r\n      <created>1618563334782</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618563334782</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Add Hello\">\r\n      <created>1618581583612</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618581583612</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Add new hello\">\r\n      <created>1618836391356</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618836391356</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Add new hello\">\r\n      <created>1618846968537</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618846968537</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Add new hello\">\r\n      <created>1618847072390</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618847072390</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Working Hello\">\r\n      <created>1618847186470</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618847186470</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Working Hello\">\r\n      <created>1618847324216</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618847324216</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Working Hello\">\r\n      <created>1619013937005</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619013937005</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"autoSchoolPartTwoAndTwo\">\r\n      <created>1619101973617</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619101973617</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"autoSchoolPartTwoAndTwo\">\r\n      <created>1620390640329</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620390640329</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"autoSchoolPartTwoAndTwo\">\r\n      <created>1620393571769</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620393571769</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"12\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"First commit\" />\r\n    <MESSAGE value=\"Add folders\" />\r\n    <MESSAGE value=\"Add Hello\" />\r\n    <MESSAGE value=\"Add new hello\" />\r\n    <MESSAGE value=\"Working Hello\" />\r\n    <MESSAGE value=\"autoSchoolPartTwoAndTwo\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"autoSchoolPartTwoAndTwo\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7324bba2c2297ae3d0890ab35e9b9a68b3b06d62)
++++ b/.idea/workspace.xml	(date 1620748318797)
+@@ -1,9 +1,19 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="27cda763-5f14-4c1e-ac6d-85fb69fb9b20" name="Default Changelist" comment="autoSchoolPartTwoAndTwo">
++    <list default="true" id="27cda763-5f14-4c1e-ac6d-85fb69fb9b20" name="Default Changelist" comment="Проверять autoSchoolPartTwo...">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/Hello.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/Main.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Circle.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Figures.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Figures.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Square.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Triangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Triangle.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndTwo/first/MainTwo.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -65,7 +75,7 @@
+       <recent name="" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.MainTwo">
++  <component name="RunManager" selected="Application.Square">
+     <configuration name="Hello (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndTwo.first.Hello" />
+       <module name="AutoSchool" />
+@@ -92,19 +102,6 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="com.autoSchool_2_2.com.welcome.Hello" />
+-      <module name="AutoSchool" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="com.autoSchool_2_2.com.welcome.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+     <configuration name="Hellotwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndTwo.com.welcome.Hellotwo" />
+       <module name="AutoSchool" />
+@@ -170,6 +167,19 @@
+       <extension name="coverage">
+         <pattern>
+           <option name="PATTERN" value="com.autoSchool.first.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Square" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartThreeAndSix.figure.Square" />
++      <module name="AutoSchool" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="com.autoSchoolPartThreeAndSix.figure.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -179,11 +189,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.Square" />
+         <item itemvalue="Application.MainTwo" />
+         <item itemvalue="Application.Hello (1)" />
+         <item itemvalue="Application.Hello (2)" />
+         <item itemvalue="Application.Hellotwo" />
+-        <item itemvalue="Application.Hello" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -273,7 +283,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1620393571769</updated>
+     </task>
+-    <option name="localTasksCounter" value="12" />
++    <task id="LOCAL-00012" summary="Проверять autoSchoolPartTwo...">
++      <created>1620730182125</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1620730182125</updated>
++    </task>
++    <option name="localTasksCounter" value="13" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -295,7 +312,8 @@
+     <MESSAGE value="Add new hello" />
+     <MESSAGE value="Working Hello" />
+     <MESSAGE value="autoSchoolPartTwoAndTwo" />
+-    <option name="LAST_COMMIT_MESSAGE" value="autoSchoolPartTwoAndTwo" />
++    <MESSAGE value="Проверять autoSchoolPartTwo..." />
++    <option name="LAST_COMMIT_MESSAGE" value="Проверять autoSchoolPartTwo..." />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+Index: src/main/java/com/autoSchoolPartThreeAndSix/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.autoSchoolPartThreeAndSix;\r\n\r\npublic class Main {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/autoSchoolPartThreeAndSix/Main.java b/src/main/java/com/autoSchoolPartThreeAndSix/Main.java
+--- a/src/main/java/com/autoSchoolPartThreeAndSix/Main.java	(revision 7324bba2c2297ae3d0890ab35e9b9a68b3b06d62)
++++ b/src/main/java/com/autoSchoolPartThreeAndSix/Main.java	(date 1620747246984)
+@@ -1,4 +1,8 @@
+ package com.autoSchoolPartThreeAndSix;
+-
++import com.autoSchoolPartThreeAndSix.figure.Square;
+ public class Main {
++    public static void main(String[] args) {
++       // Main.initializeArray();
++   // Main.Square.area();
++    }
+ }
