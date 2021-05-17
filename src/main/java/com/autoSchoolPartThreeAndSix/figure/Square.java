@@ -1,50 +1,77 @@
 package com.autoSchoolPartThreeAndSix.figure;
-import java.lang.Thread;
+
+import java.io.IOException;
 import java.util.Random;
-import java.io.*;
-import java.util.Scanner;
 
-public abstract class Square extends Figures{
+public class Square extends Figures {
 
-    private static Random random;
-    private static int coordinate;
     private String name;
-    //private int coordinate;
-    private int coordinateX,coordinateY;
-    //private Random random;
-    //private double secret;
+    private static int i;
 
-    public static void main(String[] args) {
+    private static int[] arrayX;
+    private static int[] arrayY;
+    double countArea;
 
-        //System.out.println(arrayOne[i]);
-        Square.getCoordinates();
-
+    public Square(String name) {
+        super(name);
     }
 
-//    public static double setCoordinates() {
-//        int [] arrayOne = new int[8];
-//        coordinate = random.nextInt(100 + 1);
-//        for (i = 0; i < 100; i++) {
-//            arrayOne[i] = coordinate.nextInt();
-//
-//        //return 0;
-//        System.out.println(arrayOne[i]);
-//        //return coordinate;
-//    }
-//
-//    public static int getCoordinates() {
-//        //        return secret;
-//        return 0;
-//    }
 
+    public static void main(String[] args) throws IOException {
+        Square squareOne = new Square("Square");
+        //arrayX();
+        //arrayY();
+        countedArea(arrayX(), arrayY());
+    }
 
-//    public Square(String name, double area) {
-//        this.name = name;
-//    }
-//
-//   public double area(){
-//    return 0;
-//       return  ((x1y2-y2x1) + (x2y3-y2x3) + (x3y4-y3x4) + (x4y1-y4x1) )/2;
-   }
+    public static int[] arrayX() throws IOException {
+        int[] arrayX = new int[4];
+        Random random = new Random();
+        for (int i = 0; i < arrayX.length; i++) {
+            arrayX[i] = random.nextInt(50 + 1);
+        }
+        for (i = arrayX.length - 1; i >= 0; i--) {
+            System.out.println(arrayX[i]);
+        }
+        return arrayX;
+    }
 
+    public static int[] arrayY() throws IOException {
+        int[] arrayY = new int[4];
+        Random random = new Random();
+        for (int i = 0; i < arrayY.length; i++) {
+            arrayY[i] = random.nextInt(50 + 1);
+        }
+        for (i = arrayY.length - 1; i >= 0; i--) {
+            System.out.println(arrayY[i]);
+        }
+        return arrayY;
+    }
 
+    public static void setArrayX(int[] arrayX) {
+
+        Square.arrayX = arrayX;
+    }
+
+    public static void setArrayY(int[] arrayY) {
+
+        Square.arrayY = arrayY;
+    }
+
+    public static int[] getArrayX() {
+
+        return arrayX;
+    }
+
+    public static int[] getArrayY() {
+
+        return arrayY;
+    }
+
+    public static void countedArea(int[] arrayX, int[] arrayY) throws IOException {
+
+        double area = Math.sqrt(((arrayX[1] - arrayX[0]) * (arrayX[1] - arrayX[0])) + ((arrayY[1] - arrayY[0]) * (arrayY[1] - arrayY[0])));
+        //return area;
+        System.out.println(area);
+    }
+}
