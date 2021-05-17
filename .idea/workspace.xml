@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27cda763-5f14-4c1e-ac6d-85fb69fb9b20" name="Default Changelist" comment="Проверять autoSchoolPartTwo...1">
+    <list default="true" id="27cda763-5f14-4c1e-ac6d-85fb69fb9b20" name="Default Changelist" comment="Проверять autoSchoolPartThree...class Square">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Circle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Figures.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Figures.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartThreeAndSix/figure/Square.class" afterDir="false" />
@@ -10,11 +11,9 @@
       <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndFour/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndFour/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/first/Hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/first/Hello.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/first/MainTwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/autoSchoolPartTwoAndTwo/first/MainTwo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Figures.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartThreeAndSix/figure/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndFour/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoSchoolPartTwoAndFour/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="second" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,12 +96,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Hellotwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartTwoAndTwo.com.welcome.Hellotwo" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.autoSchoolPartThreeAndSix.Main" />
       <module name="AutoSchool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.autoSchoolPartTwoAndTwo.com.welcome.*" />
+          <option name="PATTERN" value="com.autoSchoolPartThreeAndSix.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -198,10 +197,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Square" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.MainTwo" />
         <item itemvalue="Application.Hello" />
-        <item itemvalue="Application.Hellotwo" />
       </list>
     </recent_temporary>
   </component>
@@ -312,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621005497523</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Проверять autoSchoolPartThree...class Square">
+      <created>1621246905944</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1621246905944</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,7 +344,8 @@
     <MESSAGE value="Проверять autoSchoolPartTwo...правки" />
     <MESSAGE value="Проверять autoSchoolPartTwo...1" />
     <MESSAGE value="пятница" />
-    <option name="LAST_COMMIT_MESSAGE" value="пятница" />
+    <MESSAGE value="Проверять autoSchoolPartThree...class Square" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проверять autoSchoolPartThree...class Square" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

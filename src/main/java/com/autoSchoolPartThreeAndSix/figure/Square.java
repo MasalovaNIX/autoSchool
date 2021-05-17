@@ -19,8 +19,7 @@ public class Square extends Figures {
 
     public static void main(String[] args) throws IOException {
         Square squareOne = new Square("Square");
-        //arrayX();
-        //arrayY();
+
         countedArea(arrayX(), arrayY());
     }
 
@@ -67,6 +66,7 @@ public class Square extends Figures {
 
         return arrayY;
     }
+
 
     public static void countedArea(int[] arrayX, int[] arrayY) throws IOException {
 
