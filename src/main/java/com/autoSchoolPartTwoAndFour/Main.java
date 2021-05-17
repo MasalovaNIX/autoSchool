@@ -27,20 +27,22 @@ public class Main {
         if ((length % 2 != 0))
             //System.out.println("Средний символ = " + yourString.substring((length-1)/2, length-((length-1)/2)));
             //зачем substring, если нужен только один символ? charAt() прекрасно подходит для этой цели
-            System.out.println("Средний символ = " + yourString.charAt((length - ((length - 1) / 2))));
+            System.out.println("Средний символ = " + yourString.charAt(((length -1)- ((length-1) / 2))));
+            //yourString.charAt(yourString.length() / 2));
         else
             System.out.println("Средний символ отсутствует ");
 
         String part1 = yourString.substring(0, yourString.indexOf('.'));
         System.out.println("Часть строки до первой встреченной точки, включая точку: " + part1 + ".");
         //также предусмотрите вывод количества пробелов - ещё сказано в задании
-        int spacesNum = 0;
-        for (int i = 0; i < yourString.length(); i++) {
-            if (yourString.charAt(i) == ' ') {
-                spacesNum++;
-            }
-        }
-        System.out.println("Количество пробелов: " + spacesNum);
+//        int spacesNum = 0;
+//        for (int i = 0; i < yourString.length(); i++) {
+//            if (yourString.charAt(i) == ' ') {
+//                spacesNum++;
+//            }
+//        }
+        int n = yourString.split(" ").length - 1;
+        System.out.println("Количество пробелов: " + n);
 
         System.out.print("Введите фрагмент строки, который Вы хотите заменить: ");
         //Hello, world.
